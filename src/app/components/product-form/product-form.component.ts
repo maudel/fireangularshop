@@ -10,20 +10,20 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./product-form.component.css']
 })
 export class ProductFormComponent implements OnInit {
-  product={} as Product;
-  enviar:boolean=true;
-  constructor(private ps:ProductService) { }
+  product = {} as Product;
+  enviar = true;
+  constructor(private ps: ProductService) { }
 
   ngOnInit(): void {
-  
+
   }
-addProduct(){
+addProduct() {
   this.ps.addProduct(this.product);
-  this.product={};
+  this.product = {};
 }
-actualizar(){
+actualizar() {
   this.ps.updateProduct(this.product);
-  this.product={};
-  this.enviar=true;
+  this.product = {};
+  this.enviar = true;
 }
 }

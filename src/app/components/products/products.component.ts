@@ -9,28 +9,28 @@ import { ProductFormComponent } from '../product-form/product-form.component';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-productos:Array<any>=[]
+productos: Array<any> = [];
   constructor(
-    public ps:ProductService) {
-       
-    
+    public ps: ProductService) {
+
+
    }
-@ViewChild(ProductFormComponent, {static:true}) formulario:ProductFormComponent;
+@ViewChild(ProductFormComponent, {static: true}) formulario: ProductFormComponent;
   ngOnInit(): void {
-    this.ps.getProducts().subscribe(arg =>{
-      console.log(arg)
-      this.productos=arg});
+    this.ps.getProducts().subscribe(arg => {
+      console.log(arg);
+      this.productos = arg; });
   }
-onedit(product){
-  this.formulario.product=product;
-  this.formulario.enviar=false;
+onedit(product) {
+  this.formulario.product = product;
+  this.formulario.enviar = false;
 }
-ondelete(product){
-this.ps.deleteProduct(product)
+ondelete(product) {
+this.ps.deleteProduct(product);
 }
 setMyStyles(productos) {
-  let styles = {
-    'padding.px':'5'
+  const styles = {
+    'padding.px': '5'
   };
   return styles;
 }
