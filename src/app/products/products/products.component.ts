@@ -1,6 +1,7 @@
 import { Component, OnInit, Host, ViewChild } from '@angular/core';
-import {ProductService } from '../../services/product.service';
+import {ProductService } from '../../core/services/product.service';
 import { ProductFormComponent } from '../product-form/product-form.component';
+import { Product } from 'src/app/core/models/product';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { ProductFormComponent } from '../product-form/product-form.component';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-productos: Array<any> = [];
+productos: Array<Product> = [];
   constructor(
     public ps: ProductService) {
 

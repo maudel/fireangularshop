@@ -6,19 +6,21 @@
 }
 .listado {
     display:flex;
-    width: 55%;
+    width: 75%;
     flex-wrap: wrap;
     justify-content: center;
 }
 mat-card{
-    width: 250px;
+    width: 350px;
     background-color: primary;
-    margin: 5px;
-    height: 250px;
-
+    margin: 20px;
+    height: 4ß0px;
 }
 .formulario{
-   width: 40%;
+   width: 20%;
     justify-items: center;
     margin-left: auto;
+}
+.mat-card-image{
+    max-height: 350px;
 }

@@ -1,7 +1,6 @@
 <div class="contenedor">
   <div class="formulario">
     <app-product-form></app-product-form>
-
   </div>
   <div class="listado">
     <div *ngFor="let item of productos">
@@ -9,6 +8,7 @@
         <mat-card-header>
           <mat-card-title><h2>{{item.name}}</h2></mat-card-title>
         </mat-card-header>
+        <img mat-card-image [src]="item.image" alt="">
         <mat-card-content>
           <p [ngStyle]="{'color':'green','font-size.em':'1.2'}" >{{item.description}}</p>
           <h3>Price: <span

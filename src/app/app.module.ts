@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {AngularMaterialModule} from './angular-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { ProductFormComponent } from './components/product-form/product-form.component';
-import { ProductsComponent } from './components/products/products.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LayoutComponent } from './layout/layout.component';
+
+
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -20,8 +21,7 @@ import { FormsModule} from '@angular/forms';
   declarations: [
     AppComponent,
     NavbarComponent,
-    ProductFormComponent,
-    ProductsComponent
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
