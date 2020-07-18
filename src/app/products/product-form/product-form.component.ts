@@ -31,28 +31,11 @@ addProduct() {
   this.product = {};
 }
 actualizar() {
-  this.ps.updateProduct(this.product);
-  this.product = {};
-  this.enviar = true;
+  console.log('actualiza')
 }
 
 uploadFile(event) {
-  const file = event.target.files[0];
-  
-  const name = file.name;
-  const fileRef = this.storage.ref(name);
-  const task = this.storage.upload(name, file);
-  task.snapshotChanges()
-  .pipe(
-    finalize(() => {
-      this.image$ = fileRef.getDownloadURL();
-      this.image$.subscribe(url => {
-        console.log(url);
-        this.product.image = url;
-      });
-    })
-  )
-  .subscribe();
+  console.log('sube imagen')
 }
 }
 

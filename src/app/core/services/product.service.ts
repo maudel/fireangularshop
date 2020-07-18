@@ -36,8 +36,6 @@ this.productDoc = this.firestore.doc(`products/${product.id}`);
 this.productDoc.delete();
    }
    updateProduct(product: Product) {
-    this.productDoc = this.firestore.doc(`products/${product.id}`);
-    this.productDoc.update(product);
    }
 
 }
